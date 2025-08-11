@@ -1,0 +1,2 @@
+# NaijaGPA
+Calculate GPA/CGPA
