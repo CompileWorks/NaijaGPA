@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NaijaGPA - Nigerian GPA/CGPA Calculator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<header>
+<div class="logo">
+<i class="fas fa-calculator"></i>
+<h1>NaijaGPA</h1>
+</div>
+<p class="tagline">Precision in Academic Measurement</p>
+</header>
+
+<main>
+<div class="calculator-container">
+<div class="tabs">
+<button class="tab-btn active" data-tab="gpa">GPA Calculator</button>
+<button class="tab-btn" data-tab="cgpa">CGPA Calculator</button>
+</div>
+
+<div class="tab-content active" id="gpa">
+<div class="input-section">
+<div class="course-inputs">
+<div class="course-row">
+<input type="text" class="course-code" placeholder="Course Code">
+<select class="grade">
+<option value="">Select Grade</option>
+<option value="5">A (5)</option>
+<option value="4">B (4)</option>
+<option value="3">C (3)</option>
+<option value="2">D (2)</option>
+<option value="1">E (1)</option>
+<option value="0">F (0)</option>
+</select>
+<input type="number" class="credit" placeholder="Credit Unit" min="1" max="10">
+<button class="remove-btn"><i class="fas fa-times"></i></button>
+</div>
+</div>
+<button class="add-btn"><i class="fas fa-plus"></i> Add Course</button>
+</div>
+<div class="result-section">
+<button class="calculate-btn">Calculate GPA</button>
+<div class="result-display">
+<div class="result-box">
+<span>GPA:</span>
+<span id="gpa-result">0.00</span>
+</div>
+<div class="result-box">
+<span>Total Credits:</span>
+<span id="total-credits">0</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-content" id="cgpa">
+<div class="input-section">
+<div class="semester-inputs">
+<div class="semester-row">
+<input type="text" class="semester-name" placeholder="Semester Name">
+<input type="number" class="semester-gpa" placeholder="GPA" step="0.01" min="0" max="5">
+<input type="number" class="semester-credits" placeholder="Total Credits" min="1">
+<button class="remove-btn"><i class="fas fa-times"></i></button>
+</div>
+</div>
+<button class="add-btn"><i class="fas fa-plus"></i> Add Semester</button>
+</div>
+<div class="result-section">
+<button class="calculate-btn">Calculate CGPA</button>
+<div class="result-display">
+<div class="result-box">
+<span>CGPA:</span>
+<span id="cgpa-result">0.00</span>
+</div>
+<div class="result-box">
+<span>Total Credits:</span>
+<span id="cumulative-credits">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="info-section">
+<div class="info-card">
+<h3><i class="fas fa-info-circle"></i> Grading System</h3>
+<table>
+<tr>
+<th>Grade</th>
+<th>Points</th>
+<th>Score Range</th>
+</tr>
+<tr>
+<td>A</td>
+<td>5</td>
+<td>70-100%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>4</td>
+<td>60-69%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>3</td>
+<td>50-59%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>2</td>
+<td>45-49%</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1</td>
+<td>40-44%</td>
+</tr>
+<tr>
+<td>F</td>
+<td>0</td>
+<td>0-39%</td>
+</tr>
+</table>
+</div>
+
+<div class="info-card">
+<h3><i class="fas fa-question-circle"></i> How to Calculate</h3>
+<p><strong>GPA Formula:</strong></p>
+<p>GPA = Σ(Grade Point × Credit Unit) / ΣCredit Units</p>
+<p><strong>CGPA Formula:</strong></p>
+<p>CGPA = Σ(GPA × Semester Credits) / ΣSemester Credits</p>
+</div>
+</div>
+</main>
+
+<footer>
+<p>&copy; 2023 NaijaGPA - Nigerian Academic Calculator</p>
+<div class="social-links">
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
